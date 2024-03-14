@@ -1,0 +1,18 @@
+﻿@model day4.Models.Student
+
+@{
+    ViewBag.Title = "Add New Student";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.FirstName)
+    @Html.TextBoxFor(model => model.FirstName)
+
+    @Html.LabelFor(model => model.LastName)
+    @Html.TextBoxFor(model => model.LastName)
+
+    <button type="submit">Add Student</button>
+}
